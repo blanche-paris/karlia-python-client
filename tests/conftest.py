@@ -4,7 +4,7 @@ import pytest
 from vcr import VCR
 from vcr.persisters.filesystem import FilesystemPersister as VCRFilesystemPersister
 
-from karlia import Client
+from karlia_python_client import Client
 
 from . import VCR_DIR
 
