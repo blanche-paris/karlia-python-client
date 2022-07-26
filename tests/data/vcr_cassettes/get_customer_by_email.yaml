@@ -1,0 +1,34 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - karlia.fr
+      user-agent:
+      - python-httpx/0.23.0
+    method: GET
+    uri: https://karlia.fr/app/api/v2/customers?email=z.merlin%40hotmail.fr
+  response:
+    content: '{"status":"success","pagination":{"total":1,"limit":100,"offset":0},"data":[{"id":"211641","title":"Mme
+      Zoe Merlin","individual":"1","prospect":"1","id_client_manager":[],"phone":"","mobile":"+33670980957","email":"z.merlin@hotmail.fr","langId":"1","siret":"","siren":"","legal_form":"","main_activity":"","vat_number":"","id_parent":"0","id_products_prices_category":"0","id_payment_condition":"0","id_vat":"-1","description":"","client_number":"","address_list":[],"custom_fields_list":[],"creation_date":"2022-04-29
+      11:21:40","created_by":"0","update_date":"2022-04-29 11:22:11","updated_by":"2394"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 26 Jul 2022 20:07:22 GMT
+      Server:
+      - nginx/1.14.2
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
