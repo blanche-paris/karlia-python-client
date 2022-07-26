@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "karlia"
+description = 'Karlia python client'
+authors = [
+    {name = "Atelier Blanche", email = "contact@atelier-blanche.paris"},
+]
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3.10"
+
+dynamic = ["version"]
+
+dependencies = [
+  'httpx',
+]
+
+[project.optional-dependencies]
+qa = [
+  'flake8',
+  'flake8-bugbear',
+  'flake8-builtins',
+  'black',
+  'isort',
+  'pre-commit',
+]
+
+test = [
+  'coverage>=5.0.3',
+  'pytest',
+  'pytest-asyncio',
+  'vcrpy',
+]
+
+[tool.isort]
+line_length = 88
+profile = 'black'
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+    \.git
+    | \.mypy_cache
+    | \.pytest_cache
+    | htmlcov
+    | build
+  )/
+)
+'''
+
+[tool.pytest.ini_options]
+asyncio_mode = 'auto'
+
+[tool.hatch.version]
+path = "karlia/__init__.py"
